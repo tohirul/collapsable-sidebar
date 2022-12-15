@@ -1,0 +1,59 @@
+/* * Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800;900&display=swap");
+
+/* * Style Root  */
+:root {
+	--accent-color: rgb(204, 0, 0);
+	--lightest-gray: rgb(200, 200, 200);
+	--light-gray: rgb(144, 144, 144);
+	--medium-gray: rgb(96, 96, 96);
+	--dark-gray: rgb(13, 13, 13);
+	--header-height: 48px;
+	--animation-duration: 400ms;
+	--animation-timing-curve: ease-in-out;
+}
+
+/* * Universal Selector */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	font-family: "Poppins", sans-serif;
+}
+
+/* * Sidebar Unique Events */
+
+.sidebar-list-item {
+	position: relative;
+}
+.sidebar-icon {
+	fill: var(--light-gray);
+}
+
+.sidebar-list-item:hover {
+	background-color: var(--lightest-gray);
+}
+.sidebar-list-item:hover .sidebar-icon {
+	fill: var(--accent-color);
+}
+.sidebar-list-item:hover .sidebar-hidden-content {
+	color: var(--accent-color);
+}
+.sidebar-list-item.active {
+	background-color: var(--lightest-gray);
+}
+.sidebar-list-item.active .sidebar-icon {
+	fill: var(--accent-color);
+}
+.sidebar-list-item.active::before {
+	content: "";
+	width: 5px;
+	height: 100%;
+
+	position: absolute;
+	left: 0;
+	top: 0;
+
+	background-color: var(--accent-color);
+}
